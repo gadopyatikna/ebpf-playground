@@ -109,7 +109,7 @@ static void walk_stack(pid_t pid, unsigned long frame)
     struct py_code code;
     
     int depth = 0;
-    while (frame && depth < 40) {
+    while (frame && frame != 1 && depth < 40) {
 
         if (read_mem(pid, &f, (void*)frame, sizeof(f)) <= 0)
             break;
