@@ -2,9 +2,6 @@
 #include <bpf/bpf_helpers.h>
 #include <bpf/bpf_tracing.h>
 
-// libbpf_set_strict_mode(LIBBPF_STRICT_ALL);
-// libbpf_set_print(libbpf_print_fn);
-
 struct event {
     u32 pid;
     u64 frame_ptr;
